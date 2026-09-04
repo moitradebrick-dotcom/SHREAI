@@ -12,7 +12,7 @@ const ICONS = {
   steps: ListOrdered,
 } as const;
 
-export function VisualPanel({ visual }: { visual?: TeachingVisual | null }) {
+export function VisualPanel({ visual }: { visual: TeachingVisual | null | undefined }) {
   if (!visual) {
     return (
       <div className="glass-card flex min-h-[280px] items-center justify-center p-8 text-center text-sm text-muted-foreground">

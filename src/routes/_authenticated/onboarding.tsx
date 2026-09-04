@@ -50,7 +50,7 @@ function Onboarding() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [saving, setSaving] = useState(false);
 
-  const step = STEPS[index];
+  const step = STEPS[index]!;
   const selected = answers[step.key];
 
   const finish = async (final: Record<string, string>) => {

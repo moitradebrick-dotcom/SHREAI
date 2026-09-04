@@ -37,9 +37,9 @@ const PLANNING_STEPS = [
 ];
 
 export const Route = createFileRoute("/_authenticated/learn")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    topic: typeof search["topic"] === "string" ? (search["topic"] as string) : undefined,
-    revise: search["revise"] === true || search["revise"] === "true" ? true : undefined,
+  validateSearch: (search: Record<string, unknown>): { topic?: string; revise?: boolean } => ({
+    ...(typeof search["topic"] === "string" ? { topic: search["topic"] as string } : {}),
+    ...(search["revise"] === true || search["revise"] === "true" ? { revise: true } : {}),
   }),
   head: () => ({
     meta: [
@@ -134,7 +134,7 @@ function Learn() {
           difficulty: plan.difficulty ?? level,
           duration_minutes: demo ? 10 : duration,
           teaching_style: style,
-          plan: plan as unknown as Record<string, unknown>,
+          plan: plan as unknown as never,
           demo_mode: demoMode,
         })
         .select("id")

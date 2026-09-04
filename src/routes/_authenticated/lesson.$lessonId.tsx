@@ -200,12 +200,12 @@ function TeacherRoom() {
           lesson_id: lessonId,
           concept: step.concept_name ?? step.concept_id,
           event_type: "answer",
-          detail: {
+          payload: {
             question: step.question.question,
             answer: answer.trim(),
             correct: result.correct,
             misconception: result.misconception ?? null,
-          },
+          } as unknown as never,
         });
       }
 
@@ -263,12 +263,12 @@ function TeacherRoom() {
         lesson_id: lessonId,
         topic: lesson?.topic ?? plan.title,
         score: graded.score,
-        total: questions.length,
-        correct_count: graded.correct_count ?? null,
+        total_questions: questions.length,
         strong_areas: graded.strong_areas ?? [],
         weak_areas: graded.weak_areas ?? [],
+        misconceptions: graded.misconceptions ?? [],
         recommendation: graded.recommendation ?? null,
-        details: graded as unknown as Record<string, unknown>,
+        results: graded as unknown as never,
       });
 
       const masteryRows = [
@@ -474,7 +474,7 @@ function TeacherRoom() {
         </div>
 
         <div className="space-y-5">
-          <VisualPanel visual={step?.visual} />
+          <VisualPanel visual={step?.visual ?? null} />
 
           {step?.question ? (
             <section className="glass-card p-6">

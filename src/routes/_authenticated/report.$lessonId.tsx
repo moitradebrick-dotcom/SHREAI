@@ -58,6 +58,10 @@ function Report() {
   const a = data?.assessment;
   const score = a?.score ?? 0;
   const strong = (a?.strong_areas as string[] | null) ?? [];
+  const resultItems = (a?.results as { correct?: boolean }[] | null) ?? [];
+  const correctCount = Array.isArray(resultItems)
+    ? resultItems.filter((r) => r?.correct).length
+    : 0;
   const weak = (a?.weak_areas as string[] | null) ?? [];
 
   return (
@@ -77,7 +81,7 @@ function Report() {
           <p className="text-xs uppercase tracking-wider text-primary">Your score</p>
           <p className="mt-4 font-display text-6xl font-semibold">{score}%</p>
           <p className="mt-2 text-sm text-muted-foreground">
-            {a?.correct_count ?? 0} of {a?.total ?? 0} answered correctly
+            {correctCount} of {a?.total_questions ?? 0} answered correctly
           </p>
           <Progress value={score} className="mt-5" />
           <p className="mt-5 text-sm">
@@ -127,7 +131,7 @@ function Report() {
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild>
-                <Link to="/learn" search={{ topic: lesson?.topic ?? undefined, revise: undefined }}>
+                <Link to="/learn" search={lesson?.topic ? { topic: lesson.topic } : {}}>
                   Continue this topic
                 </Link>
               </Button>
