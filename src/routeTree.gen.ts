@@ -16,6 +16,7 @@ import { Route as AuthenticatedDashboardRouteImport } from './routes/_authentica
 import { Route as AuthenticatedLearnRouteImport } from './routes/_authenticated/learn'
 import { Route as AuthenticatedOnboardingRouteImport } from './routes/_authenticated/onboarding'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
+import { Route as AuthenticatedRevisionRouteImport } from './routes/_authenticated/revision'
 import { Route as ApiTtsRouteImport } from './routes/api/tts'
 import { Route as AuthenticatedLessonLessonIdRouteImport } from './routes/_authenticated/lesson.$lessonId'
 import { Route as AuthenticatedReportLessonIdRouteImport } from './routes/_authenticated/report.$lessonId'
@@ -54,6 +55,11 @@ const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedRevisionRoute = AuthenticatedRevisionRouteImport.update({
+  id: '/revision',
+  path: '/revision',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const ApiTtsRoute = ApiTtsRouteImport.update({
   id: '/api/tts',
   path: '/api/tts',
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/learn': typeof AuthenticatedLearnRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/revision': typeof AuthenticatedRevisionRoute
   '/api/tts': typeof ApiTtsRoute
   '/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
   '/report/$lessonId': typeof AuthenticatedReportLessonIdRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/learn': typeof AuthenticatedLearnRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/revision': typeof AuthenticatedRevisionRoute
   '/api/tts': typeof ApiTtsRoute
   '/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
   '/report/$lessonId': typeof AuthenticatedReportLessonIdRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/_authenticated/learn': typeof AuthenticatedLearnRoute
   '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
+  '/_authenticated/revision': typeof AuthenticatedRevisionRoute
   '/api/tts': typeof ApiTtsRoute
   '/_authenticated/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
   '/_authenticated/report/$lessonId': typeof AuthenticatedReportLessonIdRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/onboarding'
     | '/progress'
+    | '/revision'
     | '/api/tts'
     | '/lesson/$lessonId'
     | '/report/$lessonId'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/onboarding'
     | '/progress'
+    | '/revision'
     | '/api/tts'
     | '/lesson/$lessonId'
     | '/report/$lessonId'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/_authenticated/learn'
     | '/_authenticated/onboarding'
     | '/_authenticated/progress'
+    | '/_authenticated/revision'
     | '/api/tts'
     | '/_authenticated/lesson/$lessonId'
     | '/_authenticated/report/$lessonId'
@@ -202,6 +214,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedProgressRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/revision': {
+      id: '/_authenticated/revision'
+      path: '/revision'
+      fullPath: '/revision'
+      preLoaderRoute: typeof AuthenticatedRevisionRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/api/tts': {
       id: '/api/tts'
       path: '/api/tts'
@@ -231,6 +250,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedLearnRoute: typeof AuthenticatedLearnRoute
   AuthenticatedOnboardingRoute: typeof AuthenticatedOnboardingRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
+  AuthenticatedRevisionRoute: typeof AuthenticatedRevisionRoute
   AuthenticatedLessonLessonIdRoute: typeof AuthenticatedLessonLessonIdRoute
   AuthenticatedReportLessonIdRoute: typeof AuthenticatedReportLessonIdRoute
 }
@@ -240,6 +260,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedLearnRoute: AuthenticatedLearnRoute,
   AuthenticatedOnboardingRoute: AuthenticatedOnboardingRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
+  AuthenticatedRevisionRoute: AuthenticatedRevisionRoute,
   AuthenticatedLessonLessonIdRoute: AuthenticatedLessonLessonIdRoute,
   AuthenticatedReportLessonIdRoute: AuthenticatedReportLessonIdRoute,
 }
