@@ -15,7 +15,7 @@ export function QuestionCard({
   selected: number | null;
   revealed: boolean;
   onSelect: (index: number) => void;
-  hint?: string;
+  hint?: string | undefined;
 }) {
   return (
     <section className="glass-card animate-in fade-in slide-in-from-bottom-2 p-5">

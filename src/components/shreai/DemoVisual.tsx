@@ -5,7 +5,7 @@ export function DemoVisual({
   caption,
 }: {
   kind: DemoVisualKind;
-  caption?: string;
+  caption?: string | undefined;
 }) {
   return (
     <figure className="glass-card animate-in fade-in duration-500 p-6">
