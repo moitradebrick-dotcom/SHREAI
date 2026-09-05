@@ -38,7 +38,7 @@ import type {
 export const Route = createFileRoute("/_authenticated/lesson/$lessonId")({
   head: () => ({
     meta: [
-      { title: "Teacher Room — live AI lesson | TeachAI" },
+      { title: "Teacher Room — live AI lesson | SHREAI" },
       {
         name: "description",
         content:

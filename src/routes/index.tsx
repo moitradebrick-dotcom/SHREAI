@@ -12,13 +12,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TeachAI — an AI teacher that actually teaches you" },
+      { title: "SHREAI — an AI teacher that actually teaches you" },
       {
         name: "description",
         content:
-          "TeachAI explains any topic out loud, checks your understanding, spots what you misunderstood and re-teaches until it clicks. In your language, at your level.",
+          "SHREAI explains any topic out loud, checks your understanding, spots what you misunderstood and re-teaches until it clicks. In your language, at your level.",
       },
-      { property: "og:title", content: "TeachAI — an AI teacher that actually teaches you" },
+      { property: "og:title", content: "SHREAI — an AI teacher that actually teaches you" },
       {
         property: "og:description",
         content:
@@ -77,7 +77,7 @@ function Landing() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <GraduationCap className="size-5" />
           </span>
-          <span className="font-display text-lg font-semibold">TeachAI</span>
+          <span className="font-display text-lg font-semibold">SHREAI</span>
         </span>
         <Link
           to="/auth"
@@ -152,7 +152,7 @@ function Landing() {
       </main>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        TeachAI — learning that adapts to you.
+        SHREAI — learning that adapts to you.
       </footer>
     </div>
   );

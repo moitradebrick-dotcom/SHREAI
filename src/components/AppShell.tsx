@@ -43,7 +43,7 @@ export function AppShell({
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <GraduationCap className="size-5" />
           </span>
-          <span className="font-display text-lg font-semibold">TeachAI</span>
+          <span className="font-display text-lg font-semibold">SHREAI</span>
         </Link>
 
         <nav className="mt-8 flex flex-1 flex-col gap-1">

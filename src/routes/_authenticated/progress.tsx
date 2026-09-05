@@ -11,13 +11,13 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/progress")({
   head: () => ({
     meta: [
-      { title: "Your progress and mastery — TeachAI" },
+      { title: "Your progress and mastery — SHREAI" },
       {
         name: "description",
         content:
           "Track scores over time, see mastery per concept and watch weak areas turn into strong ones.",
       },
-      { property: "og:title", content: "Your progress and mastery — TeachAI" },
+      { property: "og:title", content: "Your progress and mastery — SHREAI" },
       {
         property: "og:description",
         content: "Scores over time and mastery for every concept you've studied.",

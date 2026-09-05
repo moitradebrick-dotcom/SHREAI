@@ -10,13 +10,13 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/report/$lessonId")({
   head: () => ({
     meta: [
-      { title: "Your lesson report — TeachAI" },
+      { title: "Your lesson report — SHREAI" },
       {
         name: "description",
         content:
           "See your score, the concepts you mastered, what still needs work and exactly what to learn next.",
       },
-      { property: "og:title", content: "Your lesson report — TeachAI" },
+      { property: "og:title", content: "Your lesson report — SHREAI" },
       {
         property: "og:description",
         content: "Score, strong areas, weak areas and your recommended next lesson.",

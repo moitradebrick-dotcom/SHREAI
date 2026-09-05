@@ -11,13 +11,13 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
-      { title: "Your learning dashboard — TeachAI" },
+      { title: "Your learning dashboard — SHREAI" },
       {
         name: "description",
         content:
           "Resume your lesson, see your strong and weak concepts, and get the next topic your AI teacher recommends.",
       },
-      { property: "og:title", content: "Your learning dashboard — TeachAI" },
+      { property: "og:title", content: "Your learning dashboard — SHREAI" },
       {
         property: "og:description",
         content: "Resume lessons, track mastery and see what to learn next.",

@@ -43,13 +43,13 @@ export const Route = createFileRoute("/_authenticated/learn")({
   }),
   head: () => ({
     meta: [
-      { title: "Teach me a topic — TeachAI lesson setup" },
+      { title: "Teach me a topic — SHREAI lesson setup" },
       {
         name: "description",
         content:
-          "Choose a topic, your language, level and how many minutes you have. TeachAI plans the whole lesson around it.",
+          "Choose a topic, your language, level and how many minutes you have. SHREAI plans the whole lesson around it.",
       },
-      { property: "og:title", content: "Teach me a topic — TeachAI" },
+      { property: "og:title", content: "Teach me a topic — SHREAI" },
       {
         property: "og:description",
         content: "Set the topic, time and language; your AI teacher plans the rest.",

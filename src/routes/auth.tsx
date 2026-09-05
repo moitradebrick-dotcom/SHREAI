@@ -13,13 +13,13 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in to TeachAI — your personal AI teacher" },
+      { title: "Sign in to SHREAI — your personal AI teacher" },
       {
         name: "description",
         content:
-          "Create your TeachAI account to get personalized lessons taught by an AI teacher that adapts to how you learn.",
+          "Create your SHREAI account to get personalized lessons taught by an AI teacher that adapts to how you learn.",
       },
-      { property: "og:title", content: "Sign in to TeachAI" },
+      { property: "og:title", content: "Sign in to SHREAI" },
       {
         property: "og:description",
         content: "Personalized lessons from an AI teacher that adapts to how you learn.",
@@ -95,7 +95,7 @@ function AuthPage() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <GraduationCap className="size-5" />
           </span>
-          <span className="font-display text-lg font-semibold">TeachAI</span>
+          <span className="font-display text-lg font-semibold">SHREAI</span>
         </Link>
 
         <div className="glass-card p-7">

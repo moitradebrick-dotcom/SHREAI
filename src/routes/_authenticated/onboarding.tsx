@@ -18,11 +18,11 @@ import {
 export const Route = createFileRoute("/_authenticated/onboarding")({
   head: () => ({
     meta: [
-      { title: "Personalize your AI teacher — TeachAI" },
+      { title: "Personalize your AI teacher — SHREAI" },
       {
         name: "description",
         content:
-          "Tell TeachAI your level, language, goal and preferred teaching style so every lesson is built for you.",
+          "Tell SHREAI your level, language, goal and preferred teaching style so every lesson is built for you.",
       },
       { property: "og:title", content: "Personalize your AI teacher" },
       {
