@@ -207,6 +207,12 @@ function TeacherRoom() {
       return;
     }
     bump("Ohm's Law", 82);
+    setEngine((e) => ({
+      ...e,
+      understanding: 82,
+      strategy: "Mastery confirmed",
+      next: "Move on to Series Circuits",
+    }));
     setStage("report");
     stop();
   }
