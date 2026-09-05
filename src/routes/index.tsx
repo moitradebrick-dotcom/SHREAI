@@ -62,13 +62,6 @@ const FEATURES = [
   },
 ];
 
-const STEPS = [
-  { n: "1", t: "Tell it a topic", d: "Plus how many minutes you have and how you like to be taught." },
-  { n: "2", t: "Get taught", d: "Explanation, visuals, and questions that check you really followed." },
-  { n: "3", t: "Get adapted to", d: "Miss something and the teacher changes approach instead of moving on." },
-  { n: "4", t: "See where you stand", d: "A short assessment and a report with your next step." },
-];
-
 function Landing() {
   return (
     <div className="min-h-screen bg-hero">
@@ -226,7 +219,7 @@ function Landing() {
       </main>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        SHREAI — learning that adapts to you.
+        SHREAI — not a chatbot. A teacher.
       </footer>
     </div>
   );

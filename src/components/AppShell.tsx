@@ -5,6 +5,7 @@ import {
   LayoutDashboard,
   LineChart,
   LogOut,
+  Presentation,
   RotateCcw,
   UserRound,
 } from "lucide-react";
@@ -16,6 +17,7 @@ import { useAuth } from "@/hooks/useAuth";
 const NAV = [
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { to: "/learn", label: "Learn", icon: BookOpen },
+  { to: "/teacher-room", label: "Teacher Room", icon: Presentation },
   { to: "/progress", label: "Progress", icon: LineChart },
   { to: "/revision", label: "Revision", icon: RotateCcw },
   { to: "/profile", label: "Profile", icon: UserRound },
