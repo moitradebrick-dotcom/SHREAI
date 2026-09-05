@@ -93,27 +93,64 @@ function Landing() {
             <Sparkles className="size-3.5" /> Not a chatbot. A teacher.
           </p>
           <h1 className="mt-6 font-display text-4xl font-semibold leading-tight md:text-6xl">
-            An AI that teaches you like the best teacher you ever had
+            SHREAI
+            <span className="mt-2 block text-2xl text-muted-foreground md:text-3xl">
+              NOT A CHATBOT. A TEACHER.
+            </span>
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            It explains out loud, stops to check if you followed, works out exactly what you
-            misunderstood — then teaches it again a different way.
+            An AI teacher that understands your level, teaches visually, checks your
+            understanding, detects misconceptions, and adapts.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/auth"
               className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-opacity hover:opacity-90"
             >
-              Start learning free
+              Start Learning
             </Link>
             <Link
-              to="/auth"
-              className="rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50"
+              to="/teacher-room"
+              className="rounded-full border border-accent/50 bg-accent/10 px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
             >
-              Watch the demo lesson
+              Experience Demo — no account
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto max-w-5xl px-4 pb-20">
+          <div className="glass-card overflow-hidden p-5">
+            <p className="text-xs uppercase tracking-wide text-muted-foreground">
+              Inside the Teacher Room
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-[180px_minmax(0,1fr)_180px]">
+              <div className="rounded-xl border border-border bg-surface p-4 text-center">
+                <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-primary/15 text-primary">
+                  <GraduationCap className="size-6" />
+                </span>
+                <p className="mt-3 text-sm font-medium">SHREAI Teacher</p>
+                <p className="text-xs text-primary">Speaking</p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-6 text-center">
+                <p className="font-display text-3xl font-semibold text-primary">V = I × R</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  “If voltage stays constant and resistance increases, what happens to current?”
+                </p>
+                <p className="mt-3 inline-block rounded-full border border-destructive/40 bg-destructive/10 px-3 py-1 text-xs text-destructive">
+                  Misconception detected → teaching method changed
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-4 text-left text-xs text-muted-foreground">
+                <p className="font-medium text-foreground">Your progress</p>
+                <p className="mt-2">✓ Current — 92%</p>
+                <p>✓ Voltage — 86%</p>
+                <p>⚠ Resistance — 63%</p>
+                <p>● Ohm's Law — 61%</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         <section className="mx-auto max-w-6xl px-4 pb-20">
           <div className="grid gap-4 md:grid-cols-3">
