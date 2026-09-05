@@ -5,6 +5,7 @@ import {
   LayoutDashboard,
   LineChart,
   LogOut,
+  Presentation,
   RotateCcw,
   UserRound,
 } from "lucide-react";
@@ -16,6 +17,7 @@ import { useAuth } from "@/hooks/useAuth";
 const NAV = [
   { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { to: "/learn", label: "Learn", icon: BookOpen },
+  { to: "/teacher-room", label: "Teacher Room", icon: Presentation },
   { to: "/progress", label: "Progress", icon: LineChart },
   { to: "/revision", label: "Revision", icon: RotateCcw },
   { to: "/profile", label: "Profile", icon: UserRound },
@@ -43,7 +45,7 @@ export function AppShell({
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <GraduationCap className="size-5" />
           </span>
-          <span className="font-display text-lg font-semibold">TeachAI</span>
+          <span className="font-display text-lg font-semibold">SHREAI</span>
         </Link>
 
         <nav className="mt-8 flex flex-1 flex-col gap-1">

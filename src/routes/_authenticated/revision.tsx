@@ -11,11 +11,11 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/revision")({
   head: () => ({
     meta: [
-      { title: "Revision — fix your weak concepts | TeachAI" },
+      { title: "Revision — fix your weak concepts | SHREAI" },
       {
         name: "description",
         content:
-          "TeachAI tracks the concepts you got wrong and rebuilds short lessons around exactly those gaps.",
+          "SHREAI tracks the concepts you got wrong and rebuilds short lessons around exactly those gaps.",
       },
       { property: "og:title", content: "Revision — fix your weak concepts" },
       {

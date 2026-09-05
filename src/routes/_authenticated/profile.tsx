@@ -20,13 +20,13 @@ import {
 export const Route = createFileRoute("/_authenticated/profile")({
   head: () => ({
     meta: [
-      { title: "Your learning profile — TeachAI" },
+      { title: "Your learning profile — SHREAI" },
       {
         name: "description",
         content:
           "Change your language, level, goal and teaching style. Every future lesson adapts to these settings.",
       },
-      { property: "og:title", content: "Your learning profile — TeachAI" },
+      { property: "og:title", content: "Your learning profile — SHREAI" },
       {
         property: "og:description",
         content: "Update your language, level, goal and teaching style at any time.",

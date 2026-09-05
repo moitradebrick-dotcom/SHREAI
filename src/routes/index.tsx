@@ -12,13 +12,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TeachAI — an AI teacher that actually teaches you" },
+      { title: "SHREAI — an AI teacher that actually teaches you" },
       {
         name: "description",
         content:
-          "TeachAI explains any topic out loud, checks your understanding, spots what you misunderstood and re-teaches until it clicks. In your language, at your level.",
+          "SHREAI explains any topic out loud, checks your understanding, spots what you misunderstood and re-teaches until it clicks. In your language, at your level.",
       },
-      { property: "og:title", content: "TeachAI — an AI teacher that actually teaches you" },
+      { property: "og:title", content: "SHREAI — an AI teacher that actually teaches you" },
       {
         property: "og:description",
         content:
@@ -62,13 +62,6 @@ const FEATURES = [
   },
 ];
 
-const STEPS = [
-  { n: "1", t: "Tell it a topic", d: "Plus how many minutes you have and how you like to be taught." },
-  { n: "2", t: "Get taught", d: "Explanation, visuals, and questions that check you really followed." },
-  { n: "3", t: "Get adapted to", d: "Miss something and the teacher changes approach instead of moving on." },
-  { n: "4", t: "See where you stand", d: "A short assessment and a report with your next step." },
-];
-
 function Landing() {
   return (
     <div className="min-h-screen bg-hero">
@@ -77,7 +70,7 @@ function Landing() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
             <GraduationCap className="size-5" />
           </span>
-          <span className="font-display text-lg font-semibold">TeachAI</span>
+          <span className="font-display text-lg font-semibold">SHREAI</span>
         </span>
         <Link
           to="/auth"
@@ -93,27 +86,64 @@ function Landing() {
             <Sparkles className="size-3.5" /> Not a chatbot. A teacher.
           </p>
           <h1 className="mt-6 font-display text-4xl font-semibold leading-tight md:text-6xl">
-            An AI that teaches you like the best teacher you ever had
+            SHREAI
+            <span className="mt-2 block text-2xl text-muted-foreground md:text-3xl">
+              NOT A CHATBOT. A TEACHER.
+            </span>
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            It explains out loud, stops to check if you followed, works out exactly what you
-            misunderstood — then teaches it again a different way.
+            An AI teacher that understands your level, teaches visually, checks your
+            understanding, detects misconceptions, and adapts.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/auth"
               className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-opacity hover:opacity-90"
             >
-              Start learning free
+              Start Learning
             </Link>
             <Link
-              to="/auth"
-              className="rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50"
+              to="/teacher-room"
+              className="rounded-full border border-accent/50 bg-accent/10 px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
             >
-              Watch the demo lesson
+              Experience Demo — no account
             </Link>
           </div>
         </section>
+
+        <section className="mx-auto max-w-5xl px-4 pb-20">
+          <div className="glass-card overflow-hidden p-5">
+            <p className="text-xs uppercase tracking-wide text-muted-foreground">
+              Inside the Teacher Room
+            </p>
+            <div className="mt-4 grid gap-3 md:grid-cols-[180px_minmax(0,1fr)_180px]">
+              <div className="rounded-xl border border-border bg-surface p-4 text-center">
+                <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-primary/15 text-primary">
+                  <GraduationCap className="size-6" />
+                </span>
+                <p className="mt-3 text-sm font-medium">SHREAI Teacher</p>
+                <p className="text-xs text-primary">Speaking</p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-6 text-center">
+                <p className="font-display text-3xl font-semibold text-primary">V = I × R</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  “If voltage stays constant and resistance increases, what happens to current?”
+                </p>
+                <p className="mt-3 inline-block rounded-full border border-destructive/40 bg-destructive/10 px-3 py-1 text-xs text-destructive">
+                  Misconception detected → teaching method changed
+                </p>
+              </div>
+              <div className="rounded-xl border border-border bg-surface p-4 text-left text-xs text-muted-foreground">
+                <p className="font-medium text-foreground">Your progress</p>
+                <p className="mt-2">✓ Current — 92%</p>
+                <p>✓ Voltage — 86%</p>
+                <p>⚠ Resistance — 63%</p>
+                <p>● Ohm's Law — 61%</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         <section className="mx-auto max-w-6xl px-4 pb-20">
           <div className="grid gap-4 md:grid-cols-3">
@@ -127,32 +157,69 @@ function Landing() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-24">
-          <h2 className="text-center font-display text-3xl font-semibold">How a lesson runs</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
-            {STEPS.map((s) => (
-              <article key={s.n} className="glass-card p-6">
-                <span className="flex size-9 items-center justify-center rounded-full bg-accent/15 font-display text-accent">
-                  {s.n}
+        <section className="mx-auto max-w-6xl px-4 pb-20">
+          <h2 className="text-center font-display text-3xl font-semibold">How SHREAI teaches</h2>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Understands you",
+              "Plans your lesson",
+              "Teaches visually",
+              "Checks understanding",
+              "Detects misconceptions",
+              "Adapts",
+              "Re-teaches",
+              "Tracks mastery",
+            ].map((label, i) => (
+              <article key={label} className="glass-card flex items-center gap-3 p-4">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent/15 font-display text-sm text-accent">
+                  {i + 1}
                 </span>
-                <h3 className="mt-4 font-display text-base font-semibold">{s.t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+                <span className="text-sm font-medium">{label}</span>
               </article>
             ))}
           </div>
-          <div className="mt-12 text-center">
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 pb-24">
+          <h2 className="text-center font-display text-3xl font-semibold">
+            Why this isn't a chatbot
+          </h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <article className="glass-card p-6">
+              <h3 className="font-display text-base font-semibold">Traditional learning</h3>
+              <p className="mt-3 text-sm text-muted-foreground">Content → Student</p>
+            </article>
+            <article className="glass-card p-6">
+              <h3 className="font-display text-base font-semibold">A chatbot</h3>
+              <p className="mt-3 text-sm text-muted-foreground">Question → Answer</p>
+            </article>
+            <article className="glass-card border-primary/50 p-6 shadow-glow">
+              <h3 className="font-display text-base font-semibold text-primary">SHREAI</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Student → Understand → Teach → Check → Adapt → Re-teach → Master
+              </p>
+            </article>
+          </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
             <Link
-              to="/auth"
+              to="/teacher-room"
               className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-glow transition-opacity hover:opacity-90"
             >
-              Teach me something
+              Try SHREAI Demo
+            </Link>
+            <Link
+              to="/auth"
+              className="rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50"
+            >
+              Teach me my own topic
             </Link>
           </div>
         </section>
+
       </main>
 
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        TeachAI — learning that adapts to you.
+        SHREAI — not a chatbot. A teacher.
       </footer>
     </div>
   );

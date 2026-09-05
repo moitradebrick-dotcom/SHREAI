@@ -79,13 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TeachAI — An AI teacher that understands how you learn" },
+      { title: "SHREAI — An AI teacher that understands how you learn" },
       {
         name: "description",
         content:
-          "TeachAI plans a personalized lesson, teaches it like a human educator, checks your understanding and adapts when you struggle.",
+          "SHREAI plans a personalized lesson, teaches it like a human educator, checks your understanding and adapts when you struggle.",
       },
-      { name: "author", content: "TeachAI" },
+      { name: "author", content: "SHREAI" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
